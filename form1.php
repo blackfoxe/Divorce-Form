@@ -9,7 +9,7 @@ session_start(); // Session starts here.
  <body>
  <div class="container">
  <div class="main">
- <h2>Divorce Form/h2>
+ <h2>Divorce Form</h2>
  <span id="error">
  <?php
  if (!empty($_SESSION['error'])) {

@@ -19,14 +19,8 @@ else{
  <body>
  <div class="container">
  <div class="main">
- <h2></h2><hr/>
+ <h2><?php echo($_SESSION['post']['name']);?></h2><hr/>
  <span id="error">
- <?php
- if (!empty($_SESSION['error_page3'])) {
- echo $_SESSION['error_page3'];
- unset($_SESSION['error_page3']);
- }
- ?>
  </span>
  <form action="form4.php" method="post">
  <label>Marital Status :<span>*</span></label>
