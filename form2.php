@@ -1,8 +1,16 @@
 <?php
 session_start(); 
-foreach ($_POST as $key => $value) {
-    $_SESSION['post'][$key] = $value;
-    }
+if(isset($_POST['name'])||isset($_POST['dv_id']))
+{
+    foreach ($_POST as $key => $value) {
+        $_SESSION['post'][$key] = $value;
+        }
+}
+else{
+    header("location: from1.php"); 
+}
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -14,7 +22,7 @@ foreach ($_POST as $key => $value) {
  <body>
  <div class="container">
  <div class="main">
- <h2></h2><hr/>
+ <h2><?php echo($_SESSION['post']['name']);?></h2><hr/>
  <span id="error">
 <?php
 // To show error of page 2.

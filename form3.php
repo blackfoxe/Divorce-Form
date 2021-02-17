@@ -1,8 +1,14 @@
 <?php
 session_start();
-foreach ($_POST as $key => $value) {
-    $_SESSION['post'][$key] = $value;
-    }
+if(isset($_POST['dob'])||isset($_POST['nationality']))
+{
+    foreach ($_POST as $key => $value) {
+        $_SESSION['post'][$key] = $value;
+        }
+}
+else{
+    header("location: from1.php"); 
+}
 ?>
 <!DOCTYPE HTML>
 <html>
